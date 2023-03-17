@@ -27,7 +27,7 @@ public class Driver {
             switch (browserType) {
                 case "remote-chrome":
                     try{
-                        String gridAddress="8.210.13.118";
+                        String gridAddress="18.210.13.118";
                         URL url=new URL("http://"+gridAddress+":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities=new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
@@ -36,11 +36,8 @@ public class Driver {
                         e.printStackTrace();
 
                     }
-
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
-                    driver.manage().window().maximize();
                     break;
+
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
